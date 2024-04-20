@@ -17,7 +17,7 @@ Welcome to LightBnB App! This application allows users to create, manage, and br
 To run the app locally, follow these steps:
 
 1. Clone the repository:
-       git clone https://github.com/Ametrysinine/LightBnB lightbnb
+    git clone https://github.com/Ametrysinine/LightBnB lightbnb
 2.     cd lightbnb
 2.     npm install
 3.     npm run local
