@@ -124,7 +124,7 @@ const getAllProperties = (options, limit = 10) => {
     queryString += `
     HAVING avg(property_reviews.rating) > $${queryParams.length} `;
   }
-  
+
   // 5
   queryParams.push(limit);
   queryString += `ORDER BY cost_per_night
@@ -146,11 +146,12 @@ const addProperty = function(property) {
     .query(`INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, 
       cover_photo_url, cost_per_night, street, city, province, post_code, country, 
       parking_spaces, number_of_bathrooms, number_of_bedrooms) 
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)`, [
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+      RETURNING *`, [
       property.owner_id, property.title, property.description, property.thumbnail_photo_url, property.cover_photo_url, property.cost_per_night, property.street,
       property.city, property.province, property.post_code, property.country, property.parking_spaces, property.number_of_bathrooms, property.number_of_bedrooms])
     .then((result) => {
-      return result.rows;
+      return result.rows[0];
     })
     .catch((err) => {
       console.log(err.message);
