@@ -9,7 +9,17 @@ Welcome to LightBnB App! This application allows users to create, manage, and br
 - **Search and Filter**: Users can search for listings based on location, dates, price range, and amenities, helping them find the perfect accommodation.
 
 ## Images
+- **Add Listings**
 
+![Add Listings](documents/AddListing.png "Add Listings")
+
+- **Filter Listings**
+
+![Filter Listings](documents/SearchProperties.png "Filter Listings")
+
+- **View Properties**
+
+![View Properties](documents/ViewProperties.png "View Properties")
 
 
 ## Installation
